@@ -50,7 +50,7 @@ int main(void){
 
     c=poly_add1(a,b);
     printf("--------------------------------------------------------------\n");
-    print_poly(c);
+    print_poly(c); 
 
     return 0;
 }
