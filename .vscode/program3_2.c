@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX(a,b) ((a)>(b)?(a):(b));//의문문을 통한 큰수찾기
-#define MAX_DEGREE 101;
+#define MAX_DEGREE 101
 typedef struct{ //타입선언
     //이 구조체의 장점 >> 덧셈이나 뺄셈시 차수의 계수를 쉽게 찾을수있음
     //단점 >> 공간의 낭비가 심함 ex) 101x^100 + 6 같은경우 공간이 단 2개만 사용됨
@@ -48,7 +48,7 @@ int main(void){
     print_poly(a);
     print_poly(b);
 
-    poly_add1(a,b);
+    c=poly_add1(a,b);
     printf("--------------------------------------------------------------\n");
     print_poly(c);
 
