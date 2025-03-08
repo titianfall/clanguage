@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h> //exit(1)을 사용하기 위한 헤더파일
 #define MAX_TERMS 101
 //
 typedef struct{ // typedef 를 사용하지 않았는데 typedef란 무엇인가? 공부하기
@@ -54,7 +55,7 @@ Polynomial poly_add2(int As,int Ae, int Bs, int Be, int *Cs,int *Ce){
     }
     *Ce=avail-1;
 }
-print_poly(int s,int e){
+void print_poly(int s,int e){
     for(int i=s;i<e;i++){
         printf("%3.1f^x + ",terms[i].coef,terms[i].expon);
     }
@@ -70,6 +71,6 @@ int main(void){
 
     printf("---------------------------------------------------------\n");
 
-    printf_poly(Cs,Ce);
+    print_poly(Cs,Ce);
     return 0;
 }
