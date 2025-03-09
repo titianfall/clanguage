@@ -7,7 +7,11 @@ typedef struct Complex{
 }Complex;
 
 Complex complex_add(Complex a,Complex b){
+    Complex C;
+    C.real=a.real + b.real;
+    C.imag = a.imag + b.imag;
 
+    return C;
 }
 
 void print_Complex(m){
@@ -18,11 +22,11 @@ void print_Complex(m){
 int main(void){
     Complex A={2,5};
     Complex B={4,3};
-    Complex C;
 
-    C=complex_add(A,B);
+    Complex result=complex_add(A,B);
 
     print_Complex(A);
     print_complex(B);
+    print_Complex(result);
 
 }
