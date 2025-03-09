@@ -28,5 +28,5 @@ int main(void){
     print_Complex(A);
     print_complex(B);
     print_Complex(result);
-
+    return 0;
 }
