@@ -21,7 +21,7 @@ void print_Complex(Complex m){
 }
 int main(void){
     Complex A={2,5};
-    Complex B={4,3};
+    Complex B={4,3}; 
 
     Complex result=complex_add(A,B);
 
