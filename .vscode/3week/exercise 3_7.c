@@ -16,7 +16,7 @@ Complex complex_add(Complex a,Complex b){
 
 void print_Complex(Complex m){
     printf("--------------------------------\n");
-    printf("%f %f*i \n",m.real,m.imag); // float 함수는 printf 함수에서 자동으로 double로 승격된다. 따라서 lf와 f 둘다 써도 상관이 없다.
+    printf("%f + %f*i \n",m.real,m.imag); // float 함수는 printf 함수에서 자동으로 double로 승격된다. 따라서 lf와 f 둘다 써도 상관이 없다.
     printf("--------------------------------\n");
 }
 int main(void){

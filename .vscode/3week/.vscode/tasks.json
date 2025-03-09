@@ -2,7 +2,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe 활성 파일 빌드",
+            "label": "C/C++: g++ Generate activity files",
             "command": "C:/mingw/bin/gcc.exe",
             "args": [
                 "-fdiagnostics-color=always",
