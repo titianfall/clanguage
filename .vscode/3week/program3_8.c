@@ -7,7 +7,7 @@
 
 int main(void){
     int *p;
-    p=(*int)malloc(size*sizeof(int));
+    p=(int *)malloc(size*sizeof(int));
     //동적할당을 해주기 전에 포인터가 널인지 확인해야한다. 널포인터를 간접참조 하려하면 시스템에서 오류가 발생하고 쉽게 알수없기 때문임
 
     if(p==NULL){
@@ -17,8 +17,8 @@ int main(void){
     for(int i=0;i<size;i++){
         p[i]=i;
     }
-    for(int i=0;i<sizeli++){
-        printf("%d",p[i]);
+    for(int i=0;i<size;i++){
+        printf("%d ",p[i]);
     }
 
     free(p);

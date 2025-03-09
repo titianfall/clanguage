@@ -25,24 +25,27 @@ void attach(float coef,int expon){
     avail++;
 }
 //C=A+B
-Polynomial poly_add2(int As,int Ae, int Bs, int Be, int *Cs,int *Ce){
+void poly_add2(int As,int Ae, int Bs, int Be, int *Cs,int *Ce){//헤더를 void 와 polynomial 의 차이는? 후자는 리턴타입이 int형임
     float tempcoef;
     *Cs=avail;
     while(As<=Ae && Bs<=Be){
-        switch(compare(terms[As].expon,terms[Bs].expon)){
+        switch(compare(terms[As].expon,terms[Bs].expon)){ //break를 달지 않아서 /출력부분에서 18 x^3이 한번 더 출력이됨 
          // 차수비교 
         case '>':
             attach(terms[As].coef,terms[As].expon);
             As++;
+            break;
         case '=':
             //attach는 두번 실행시 값이 덮어씌워짐 때문에 tmepcoef 가 필요하다. 계수
             tempcoef = terms[As].coef+terms[Bs].coef;
             attach(tempcoef,terms[As].expon);
             As++;
             Bs++;
+            break;
         case '<':
             attach(terms[Bs].coef,terms[Bs].expon);
             Bs++;
+            break; 
         }
     }
     //계수가 있는걸 처리해준 후 나머지 남은 값들을 옮겨줌
@@ -57,9 +60,9 @@ Polynomial poly_add2(int As,int Ae, int Bs, int Be, int *Cs,int *Ce){
 }
 void print_poly(int s,int e){
     for(int i=s;i<e;i++){
-        printf("%3.1f^x + ",terms[i].coef,terms[i].expon);
+        printf("%3.1f^x%d+ ",terms[i].coef,terms[i].expon);
     }
-    printf("%3.1f^x + ",terms[e].coef,terms[e].expon);
+    printf("%3.1f^x%d\n",terms[e].coef,terms[e].expon); //출력부분에서 18 x^3이 한번 더 출력이됨 switch에서 break를 안달아서?
 }
 int main(void){
 

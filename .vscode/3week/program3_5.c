@@ -14,6 +14,9 @@ typedef struct SparseMatrix{
 } SparseMatrix;
 
 SparseMatrix matrix_transepose2(SparseMatrix a){ // 구조체로 정의하는 이유는? 구조체로 정의하면 반환값의 성질은 어떻게 되는지 공부하기
+                                                //>> 함수의 반환타입은 SparseMatrix 타입의 값을 반환하게 된다.값을 복사하여 반환된다.
+                                                // 구조체가 복잡하거나 클경우 반환시 복사 비용이 발생한다. 때문에 크기가 크다면 포인터를 사용하는 방식이 더 효율적일 수 있다.
+                                                // 반환된 구조체는 함수 외부에서 관리해야하는데 구조체는 스택에 해당하므로 함수 종료시 자동으로 메모리가 해제된다.
     SparseMatrix b;
 
     int bindex;//행렬 b에서의 현재 저장위치
@@ -43,7 +46,7 @@ SparseMatrix matrix_transepose2(SparseMatrix a){ // 구조체로 정의하는 �
 void matrix_print(SparseMatrix a){
     printf("========================================\n");
     for(int r=0;r<a.terms;r++){
-        printf("( %d %d %d )\n",a.data[r].row,a.data[r].col,a.data[r].value);
+        printf("(%d, %d, %d) \n",a.data[r].row,a.data[r].col,a.data[r].value);
     }
     printf("========================================\n");
 }

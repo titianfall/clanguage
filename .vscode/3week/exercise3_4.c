@@ -9,7 +9,7 @@ int main(void){
         two[i]=1<<i;
     }
     for(int i=0;i<size;i++){
-        printf("%d",two[i]);
+        printf("%d ",two[i]);
     }
     //pow를 사용하는 방법도있다.
     /*

@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define MAX_ROWS 3
-#define MAX_COLS 5
+#define MAX_COLS 3
 int matrix[MAX_ROWS][MAX_COLS]; // 2차원 배열 
 //희소행렬의 전치행렬 구현 방법1 
 
@@ -13,13 +13,14 @@ void matrix_transpose(int A[MAX_ROWS][MAX_COLS],int B[MAX_ROWS][MAX_COLS])
     }
 }
 void matrix_print(int A[MAX_ROWS][MAX_COLS]){
-    printf("==============================");
+    printf("==============================\n");
     for(int r=0;r<MAX_ROWS;r++){
         for(int c=0;c<MAX_COLS;c++){
-            printf("%d",A[r][c]);
+            printf("%d ",A[r][c]);
         }
+        printf("\n");
     }
-    printf("===============================");
+    printf("===============================\n");
 }
 int main(void)
 {

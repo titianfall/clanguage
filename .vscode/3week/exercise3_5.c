@@ -1,5 +1,6 @@
 // 문자로된 이름, 사람의 나이, 개인의 월급 float 등이 포함된 구조체 person 정의
 #include <stdio.h>
+#include <string.h>
 
 typedef struct Person{
     char name[100];
