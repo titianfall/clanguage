@@ -26,7 +26,7 @@ int main(void){
     Complex result=complex_add(A,B);
 
     print_Complex(A);
-    print_complex(B);
+    print_Complex(B);
     print_Complex(result);
     return 0;
 }
