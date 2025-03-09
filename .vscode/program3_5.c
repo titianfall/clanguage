@@ -13,7 +13,7 @@ typedef struct SparseMatrix{
     int terms; // 항의 개수
 } SparseMatrix;
 
-void matrix_transepose2(SparseMatrix a){
+SparseMatrix matrix_transepose2(SparseMatrix a){ // 구조체로 정의하는 이유는? 구조체로 정의하면 반환값의 성질은 어떻게 되는지 공부하기
     SparseMatrix b;
 
     int bindex;//행렬 b에서의 현재 저장위치
